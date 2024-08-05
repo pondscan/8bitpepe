@@ -27,7 +27,7 @@ We welcome contributions from the community! To get started:
 
 4. **Submit Your Changes:**
     - Once you've made your additions or modifications, save your file.
-    - Share your changes by submitting them back to the community through a platform of your choice (e.g., Discord).
+    - Share your changes by submitting them back to the community through a platform of your choice (e.g., X. Telegram, etc...).
 
 ## Guidelines
 
