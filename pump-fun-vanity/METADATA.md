@@ -32,6 +32,16 @@ The metadata for a Pump.fun token includes the following fields:
 - **createdOn**: A URL indicating where the token was created. Example: `"https://pump.fun"`
 - **telegram**: A URL to the Telegram group associated with the token. Example: `"https://t.me/+r6gK6R1lmBM2OWQ5"`
 
+### Uploading Metadata to IPFS
+
+To create a Pump.fun token, you need to upload the metadata JSON to IPFS and obtain a URI. Follow these steps to upload the metadata:
+
+1. **Create Metadata JSON**: Create a JSON file with the required metadata fields.
+2. **Upload to IPFS**: Use an IPFS service such as [Pinata](https://pinata.cloud/), [Infura](https://infura.io/), or a local IPFS node to upload the JSON file.
+3. **Obtain URI**: After uploading, you will receive a URI that points to your JSON file on IPFS. This URI will be used in the on-chain token data transaction.
+
+Example URI: `https://cf-ipfs.com/ipfs/QmQS3utSndWFiWuhHj9gUUJaCAXzp5yGjE3MemtacYR3N8`
+
 ## Metaplex Metadata
 
 The on-chain data follows the Metaplex standard and includes the following fields:
