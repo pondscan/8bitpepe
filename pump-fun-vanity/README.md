@@ -28,3 +28,17 @@ Ensure you have Node.js installed.
 
 The converted `Uint8Array` can be passed through the Pump.fun contract deployment process. Make sure to handle the secret key securely and never expose it in your codebase.
 
+### Expected Output
+
+When the script is run, you should expect to see an output similar to the following:
+
+```
+Uint8Array(64) [
+92, 192, 233, 33, 60, 250, 25, 219, 30, 171, 19,
+64, 41, 25, 11, 195, 215, 124, 72, 110, 150, 108,
+150, 192, 43, 205, 149, 163, 78, 64, 137, 130, 108,
+107, 228, 47, 23, 178, 0, 33, 146, 100, 33, 19,
+180, 206, 105, 191, 144, 36, 218, 134, 165, 176, 187,
+108, 210, 119, 223, 252, 212, 169, 132, 203
+]
+```
