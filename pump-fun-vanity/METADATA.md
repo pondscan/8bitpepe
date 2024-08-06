@@ -1,6 +1,6 @@
 # Pump.fun Token Metadata
 
-This document outlines the structure and requirements for creating a Pump.fun token, including the metadata that needs to be embedded in the URI. The metadata follows the Metaplex standard for on-chain data.
+Outline of pump.fun metadata requirements.
 
 ## Metadata Structure
 
@@ -16,7 +16,9 @@ The metadata for a Pump.fun token includes the following fields:
     "image": "https://cf-ipfs.com/ipfs/QmQS3utSndWFiWuhHj9gUUJaCAXzp5yGjE3MemtacYR3N8",
     "showName": true,
     "createdOn": "https://pump.fun",
-    "telegram": "https://t.me/+r6gK6R1lmBM2OWQ5"
+    "twitter": "https://x.com/real8bitpepe"
+    "website": "https://www.8-bitpepe.com"
+    "telegram": "https://t.me/EightBitPepePortal"
 }
 ```
 
