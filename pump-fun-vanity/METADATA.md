@@ -73,12 +73,5 @@ The on-chain data follows the Metaplex standard and includes the following field
 
 ## Creating Metadata
 
-To create a Pump.fun token, you need to ensure that the metadata JSON is correctly formatted and accessible at the specified URI. This metadata is essential for the proper representation and management of the token on the Solana blockchain.
+To create a Pump.fun token, you need to ensure that the metadata JSON is correctly formatted and accessible at the specified URI.
 
-## Contact
-
-For any questions or support, please open an issue or contact us at [your email].
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
