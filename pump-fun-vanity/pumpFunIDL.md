@@ -27,10 +27,25 @@ URI = "https://example.com/token-metadata"
 
 ## Instructions for Deployment via Pump.fun
 
-### `create`
+### Overview
+To deploy your token using Pump.fun, follow these steps. It is necessary to upload and verify the IPFS (URI) data first, and then pass it into the program to create the token. Additionally, ensure you have a secret key for the mint address (vanity address secret key).
+
+### Steps to Deploy
+
+1. **Upload and Verify IPFS (URI) Data:**
+   - Create a JSON file with your token's metadata (name, symbol, description, image, etc.).
+   - Upload this JSON file to an IPFS service (e.g., Pinata, Infura).
+   - Obtain the URI (URL) of the uploaded JSON file.
+
+2. **Prepare the Secret Key for the Mint Address:**
+   - Generate a vanity address for your mint account.
+   - Securely store the secret key for the vanity address as it will be used in the deployment process.
+
+### `create` Instruction
+
 **Accounts:**
-- `mint`: (mut, signer) — **provided by the user**
-- `mintAuthority`: (not mut, not signer) — **provided by the user**
+- `mint`: (mut, signer) — **provided by the user** (your generated vanity address)
+- `mintAuthority`: (not mut, not signer) — **provided by the user** (your generated vanity address or another authority)
 - `bondingCurve`: (mut, not signer) — **created by the program**
 - `associatedBondingCurve`: (mut, not signer) — **created by the program**
 - `global`: (not mut, not signer) — `4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf`
@@ -47,8 +62,18 @@ URI = "https://example.com/token-metadata"
 **Args:**
 - `name`: string — **provided by the user**
 - `symbol`: string — **provided by the user**
-- `uri`: string — **provided by the user**
+- `uri`: string — **provided by the user** (the URI from IPFS)
 
+### Example Data
+
+#### IPFS Metadata Example (token-metadata.json):
+```json
+{
+  "name": "VanityToken",
+  "symbol": "VTK",
+  "description": "A token created with a vanity address.",
+  "image": "https://ipfs.io/ipfs/QmExampleImageLink"
+}
 
 # Instruction data example
 instruction_data = {
