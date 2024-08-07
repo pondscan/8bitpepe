@@ -74,7 +74,7 @@ To deploy your token using Pump.fun, follow these steps. It is necessary to uplo
 ### Example Data
 
 #### IPFS Metadata Example (token-metadata.json):
-```json
+
 {
   "name": "VanityToken",
   "symbol": "VTK",
