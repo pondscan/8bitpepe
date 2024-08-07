@@ -1,5 +1,81 @@
 ## Instructions Data Requirements to interact with Pump.fun
 
+from solders.pubkey import Pubkey #type: ignore
+
+# Constants
+GLOBAL = Pubkey.from_string("4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf")
+SYSTEM_PROGRAM = Pubkey.from_string("11111111111111111111111111111111")
+TOKEN_PROGRAM = Pubkey.from_string("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+ASSOC_TOKEN_ACC_PROG = Pubkey.from_string("ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL")
+RENT = Pubkey.from_string("SysvarRent111111111111111111111111111111111")
+EVENT_AUTHORITY = Pubkey.from_string("Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1")
+PUMP_FUN_PROGRAM = Pubkey.from_string("6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P")
+
+# User-generated vanity address
+VANITY_ADDRESS = Pubkey.from_string("YourVanityAddressHere")
+MINT_AUTHORITY = VANITY_ADDRESS
+BONDING_CURVE = Pubkey.from_string("YourBondingCurveAddressHere")  # This will be created by the program
+ASSOCIATED_BONDING_CURVE = Pubkey.from_string("YourAssociatedBondingCurveAddressHere")  # This will be created by the program
+MPL_TOKEN_METADATA = Pubkey.from_string("YourMPLTokenMetadataAddressHere")
+METADATA = Pubkey.from_string("YourMetadataAddressHere")
+USER_ACCOUNT = Pubkey.from_string("YourUserAccountAddressHere")
+
+# Token details
+NAME = "VanityToken"
+SYMBOL = "VTK"
+URI = "https://example.com/token-metadata"
+
+## Instructions for Deployment via Pump.fun
+
+### `create`
+**Accounts:**
+- `mint`: (mut, signer) — **provided by the user**
+- `mintAuthority`: (not mut, not signer) — **provided by the user**
+- `bondingCurve`: (mut, not signer) — **created by the program**
+- `associatedBondingCurve`: (mut, not signer) — **created by the program**
+- `global`: (not mut, not signer) — `4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf`
+- `mplTokenMetadata`: (not mut, not signer) — **provided by the user**
+- `metadata`: (mut, not signer) — **provided by the user**
+- `user`: (mut, signer) — **provided by the user**
+- `systemProgram`: (not mut, not signer) — `11111111111111111111111111111111`
+- `tokenProgram`: (not mut, not signer) — `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
+- `associatedTokenProgram`: (not mut, not signer) — `ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL`
+- `rent`: (not mut, not signer) — `SysvarRent111111111111111111111111111111111`
+- `eventAuthority`: (not mut, not signer) — `Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1`
+- `program`: (not mut, not signer) — `6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P`
+
+**Args:**
+- `name`: string — **provided by the user**
+- `symbol`: string — **provided by the user**
+- `uri`: string — **provided by the user**
+
+
+# Instruction data example
+instruction_data = {
+    "accounts": {
+        "mint": VANITY_ADDRESS,
+        "mintAuthority": MINT_AUTHORITY,
+        "bondingCurve": BONDING_CURVE,
+        "associatedBondingCurve": ASSOCIATED_BONDING_CURVE,
+        "global": GLOBAL,
+        "mplTokenMetadata": MPL_TOKEN_METADATA,
+        "metadata": METADATA,
+        "user": USER_ACCOUNT,
+        "systemProgram": SYSTEM_PROGRAM,
+        "tokenProgram": TOKEN_PROGRAM,
+        "associatedTokenProgram": ASSOC_TOKEN_ACC_PROG,
+        "rent": RENT,
+        "eventAuthority": EVENT_AUTHORITY,
+        "program": PUMP_FUN_PROGRAM
+    },
+    "args": {
+        "name": NAME,
+        "symbol": SYMBOL,
+        "uri": URI
+    }
+}
+
+
 ### `initialize`
 **Accounts:**
 - `global`: (mut, not signer) — `4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf`
@@ -26,7 +102,7 @@
 
 ### `create`
 **Accounts:**
-- `mint`: (mut, signer) — provided by the user
+- `mint`: (mut, signer) — provided by the user (your generated vanity address)
 - `mintAuthority`: (not mut, not signer) — provided by the user
 - `bondingCurve`: (mut, not signer) — provided by the user
 - `associatedBondingCurve`: (mut, not signer) — provided by the user
