@@ -29,7 +29,9 @@ USER_ACCOUNT = Pubkey.from_string("YourUserAccountAddressHere")
 
 # Token details
 NAME = "VanityToken"
+
 SYMBOL = "VTK"
+
 URI = "https://example.com/token-metadata"
 
 ## Instructions for Deployment via Pump.fun
