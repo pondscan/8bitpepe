@@ -4,12 +4,19 @@ from solders.pubkey import Pubkey #type: ignore
 
 # Constants
 GLOBAL = Pubkey.from_string("4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf")
+
 SYSTEM_PROGRAM = Pubkey.from_string("11111111111111111111111111111111")
+
 TOKEN_PROGRAM = Pubkey.from_string("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+
 ASSOC_TOKEN_ACC_PROG = Pubkey.from_string("ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL")
+
 RENT = Pubkey.from_string("SysvarRent111111111111111111111111111111111")
+
 EVENT_AUTHORITY = Pubkey.from_string("Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1")
+
 PUMP_FUN_PROGRAM = Pubkey.from_string("6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P")
+
 
 # User-generated vanity address
 VANITY_ADDRESS = Pubkey.from_string("YourVanityAddressHere")
